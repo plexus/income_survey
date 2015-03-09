@@ -34,7 +34,7 @@ var Data = (function(d3) {
 
   function load() {
     var deferred = new $.Deferred();
-    d3.tsv("//api.github.com/repos/overbryd/income_survey/data.tsv", type, function(error, data) {
+    d3.tsv("//api.github.com/repos/overbryd/income_survey/contents/data.tsv", type, function(error, data) {
       // filter incoming data
       data = data.filter(filter);
       // resolve the deferred
@@ -79,7 +79,7 @@ var svg = d3.select("body")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("//api.github.com/repos/overbryd/income_survey/data.tsv", type, function(error, data) {
+d3.tsv("//api.github.com/repos/overbryd/income_survey/contents/data.tsv", type, function(error, data) {
   data = data.filter(function(d) {
     // return /Emplo/.test(d.mode) && d.income >= 10000;
     return d.income >= 10000;
