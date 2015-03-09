@@ -3,31 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>RUG-B Income Survey</title>
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/d3.v3.min.js" charset="utf-8"></script>
   </head>
   <body>
-<style>
-body {
-  font: 12px Arial;
-  margin: 1em auto 4em auto;
-  width: 960px;
-}
-text {
-  font: 12px sans-serif;
-}
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-g.frequencyBand rect:hover {
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-</style>
-<script src="vendor/jquery.min.js"></script>
-<script src="vendor/d3.v3.min.js" charset="utf-8"></script>
-<script type="text/javascript">
+    <style>
+      body {
+        font: 12px Arial;
+        margin: 1em auto 4em auto;
+        width: 960px;
+      }
+      text {
+        font: 12px sans-serif;
+      }
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+      g.frequencyBand rect:hover {
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+    </style>
+    <script type="text/javascript">
 
 var Data = (function(d3) {
   var store = {};
