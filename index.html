@@ -34,7 +34,7 @@ var Data = (function(d3) {
 
   function load() {
     var deferred = new $.Deferred();
-    d3.tsv("data.tsv", type, function(error, data) {
+    d3.tsv("https://api.github.com/repos/overbryd/income_survey/data.tsv", type, function(error, data) {
       // filter incoming data
       data = data.filter(filter);
       // resolve the deferred
@@ -313,4 +313,3 @@ var data3 = [
 </script>
   </body>
 </html>
-
